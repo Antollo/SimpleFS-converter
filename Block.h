@@ -26,6 +26,12 @@ std::string to_string(std::int32_t value)
         return std::to_string(value) + "|";
     convertingUnion u;
     u.int32 = value;
-    return std::string(u.bytes);
+    std::string ret(4, 0);
+    ret[0] = u.bytes[0];
+    ret[1] = u.bytes[1];
+    ret[2] = u.bytes[2];
+    ret[3] = u.bytes[3];
+    return ret;
 }
+
 #endif /* !BLOCK_H_ */

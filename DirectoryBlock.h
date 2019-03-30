@@ -29,7 +29,6 @@ public:
         }
         if (Block::debug)
             ret += "\n";
-
         return ret;
     }
     friend class INodeBlock;
